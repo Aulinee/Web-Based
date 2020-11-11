@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Academic English 2</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: white;
+            background-size: cover;
+        }
+
+        .container{
+            margin: auto;
+            width: 80%;
+            overflow: hidden;
+        }
+
+        ul{
+            padding: 0;
+        }
+
+        li{
+            list-style-type: none;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        hr{
+            border: lightgray solid 1px;
+            border-bottom: none;
+        }
+
+        .resume-name{
+            font: Franklin Gothic Medium, Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: black;
+            font-weight: 800;
+        }
+
+        /*Showcase*/
+        #showcase{
+            background: url(img/academiceng.jpg) 0 -100px;
+            background-size: cover;
+            min-height: 400px;
+            text-align: center;
+            color: black;
+        }
+
+        #showcase h1{
+            margin-top: 150px;
+            margin-bottom: 10px;
+            font: Arial Black, Helvetica, sans-serif;
+            font-size: 2.75rem;
+            font-weight: 900;
+            letter-spacing: 0.4rem;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        #showcase p{
+            font-size: 15px;
+        }
+
+        /*content*/
+        .main{
+            width: 100%;
+            margin: 0;
+            float: right;
+        }
+
+        #content{
+            background-color: white;
+            width: 90%;
+            margin: auto;
+            -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .square::before {
+            content: "1";
+            color: palevioletred;
+            background:  palevioletred;
+        }
+
+        .flexbox-container-1{
+            padding: 20px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content:space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .flexbox-item-1{
+            width: 400px;
+            min-height: 402px;
+            border-right: lightgray solid 1px;
+        }
+        
+        .title-name{
+            letter-spacing: 0.4rem;
+            font: Franklin Gothic Medium, Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: black;
+            font-weight: 800;
+        }
+
+        .title-content-1{
+            font-weight: bold;
+            font-family: Arial Black, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .title-content-2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 100;
+        }
+
+        .title-content-2 li{
+            list-style-type: circle;
+            padding-bottom: 20px;
+        }
+
+        .flexbox-item-2{
+            width: 400px;
+            min-height: 402px;
+            padding: 0 10px 0 10px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .flexbox-item-3{
+            width: 400px;
+            min-height: 402px;
+            padding-left: 10px;
+            border-left: lightgray solid 1px;
+            text-align: justify;
+        }
+
+        /*sidebar*/
+        nav li{
+            padding-top: 20%;
+        }
+
+        nav li a{
+            font-family: fantasy;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: black;
+            transition-duration: 0.4s;
+        }
+
+        nav li a:hover{
+            opacity: 0.5;
+        }
+
+        i.nav-icon{
+            font-size: 25px;
+            padding: 0 5px 0 0;
+        }
+
+        #intro{
+            font: 15px Century Gothic, Helvetica, sans-serif;
+        }
+
+        li{
+            text-align: left;
+            font-size: 15px;
+            padding: 0 0 10px 0;
+        }
+
+        li.icon-nav-list{
+            display: inline;
+        }
+
+        i.icon-nav{
+            color: black;
+            background: white;
+            height: 35px;
+            width: 30px;
+            border-radius: 50%;
+            font-size: 30px;
+            padding: 5px 6px 0 6px;
+        }
+
+        .sidebar img {
+            border-radius: 50%;
+            width: 200px;
+        }
+
+        .sidebar {
+            top: 20%;
+            color: #ffffff;
+            height: 30%;
+            width: 1%;
+            position: fixed;
+            left: 0;
+            padding: 0px 30px 0px 15px;
+            text-align: center;
+        }
+
+        .bg-img-nav{
+            background: url(img/mainbg.jpg);
+            background-size: cover;
+        }
+
+        #button_2{
+            padding: 10px 15px 10px 15px;
+            border: none;
+            border-radius: 25px;
+            background: rgb(58, 213, 224);
+            -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition-duration: 0.5s;
+        }
+
+        #button_2:hover{
+            -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a{
+            color: black;
+            padding: 5px 5px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown .dropbtn {
+            font-family: fantasy;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: black;
+            transition-duration: 0.4s;
+            border: none;
+            outline: none;
+            background-color: inherit;
+        }
+
+        /*Scroll-bar*/
+        ::-webkit-scrollbar{
+            background: url(img/mainbg.jpg);
+            background-size: cover;
+            opacity: 0.5;
+            width: 5px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb{
+            background: pink;
+            border-radius: 10px;
+        }
+
+        footer{
+            background-color: rgb(241, 234, 234);
+            color: black;
+            text-align: center;
+            border-top: grey solid;
+            border-bottom: grey solid;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .flexbox-item-1,.flexbox-item-2,.flexbox-item-3{
+                min-height: 100px;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="sidebar bg-img-nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa nav-icon">&#xf015;</i></a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn">
+                            <i class="fa nav-icon">&#xf02d;</i><i class="fa fa-caret-down"></i>
+                            <div class="dropdown-content">
+                                <a href="course1.html">Course 1</a>
+                                <a href="course2.html">Course 2</a>
+                            </div>
+                        </a>
+                    </li>
+                    <br>
+                    <br>
+                    <br>
+                    <li><a href="#"><i class="fa nav-icon">&#xf03a;</i></a></li>
+                    <li><a href="#"><i class="fa nav-icon">&#xf268;</i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <section id="showcase">
+            <div class="container">
+                <h1>Academic English 2</h1>
+                <p>This course aims to develop ability in writing and oral presentation for academic purposes. We learn about
+                    the skills required in writing a variety of texts in our own relevant fields of study and also learn 
+                    how language functions in the academic genres covered.
+                </p>
+            </div>
+        </section>
+        <section class="flexbox-container-1">
+            <div class="flexbox-item flexbox-item-1">
+                <h1 class="square title-name"> Learning Outcome</h1>
+                <h3 class="title-content">Upon successful completion of this course, students will be able to demonstrate the following skills:</h3>
+                <ol class="title-content-2">
+                    <li><b>Use</b> APA referencing style to cite sources (C3)
+                    </li>
+                    <li><b>Produce</b> written academic texts in the genres 
+                        covered by using various paraphrasing techniques (A2)
+                    </li>
+                    <li>
+                        <b>Explain</b> academic topics orally using appropriate 
+                        language and presentation skills (A3)
+                    </li>
+                </ol>
+            </div>
+            <div class="flexbox-item flexbox-item-2">
+                <h1 class="square title-name"> Activities</h1>
+                <table>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Total Marks(%)</th>
+                    </tr>
+                    <tr>
+                        <th>Assessment 1a: Oral Presentation (Info Report)</th>
+                        <th>15</th>
+                    </tr>
+                    <tr>
+                        <th>Assessment 1b: Information Report (Written)</th>
+                        <th>20</th>
+                    </tr>
+                    <tr>
+                        <th>Assessment 2a: Oral Presentation (Explanation Report)</th>
+                        <th>15</th>
+                    </tr>
+                    <tr>
+                        <th>Assessment 2b: Explanation Report (Written)</th>
+                        <th>20</th>
+                    </tr>
+                    <tr>
+                        <th>Final Examamination</th>
+                        <th>30</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="flexbox-item flexbox-item-3">
+                <h1 class="square title-name"> Reflection</h1>
+                <p class="title-content2">
+                    In my opinion, I think I will gain a knowledge on how to paraphrase sentence
+                    that we cite from research paper. I will also learn on how to properly write 
+                    a reference and a citation in <i>APA</i> style. All of this knowledge definitely
+                    helps me in many ways especially in an assignment where it requires us to write 
+                    on a certain topics and put a citation to support our reasoning.
+                </p>
+            </div>
+        </section>
+        <footer>
+            <p>Duyan Web Design, Copyright &copy; 2020</p>
+        </footer>
+    </div>
+</body>
+</html>

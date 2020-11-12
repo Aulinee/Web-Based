@@ -92,7 +92,7 @@ function validateForm() {
         phoneNumber = false;
     } 
     else {
-        var regex = /^(1)[0-9]\d{8}$/;
+        var regex = /^(1)[0-9]\d{7,8}$/;
         if(regex.test(phoneNumber) == false) {
             alert("Please enter a valid mobile number");
             return  false;
@@ -111,15 +111,12 @@ function validateForm() {
         var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!"#$%&'()*+,-.:;<=>?@[\]^_`{|}~])[A-Za-z\d!"#$%&'()*+,-.:;<=>?@[\]^_`{|}~]{6,6}$/;
         if(regex.test(password) == false){
             alert("Make sure your password has 6 digits length, at least one lowercase letter, one uppercase letter, one special letter, one number and no whitespace");
-            return false;
-        }
-        else{
-            password = true;
+            password = false;
         }
     }
 
     //Validate password and confirm password match
-    if(password.value != confirmPassword.value){
+    if(password != confirmPassword){
         alert("Password does not match");
         return false;
     }
